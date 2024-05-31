@@ -132,8 +132,6 @@ extension LoginScreen: LoginScreenProtocol {
     }
     
     private func layoutUI() {
-        let padding: CGFloat = 20
-        
         NSLayoutConstraint.activate([
             backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -145,35 +143,35 @@ extension LoginScreen: LoginScreenProtocol {
             logoImageView.widthAnchor.constraint(equalToConstant: 300),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             
-            emailTextField.topAnchor.constraint(equalTo: view.centerYAnchor, constant: 4 * padding),
-            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            emailTextField.heightAnchor.constraint(equalToConstant: 2.5 * padding),
+            emailTextField.topAnchor.constraint(equalTo: view.centerYAnchor, constant: 4 * CGFloat.padding),
+            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: CGFloat.padding),
+            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -CGFloat.padding),
+            emailTextField.heightAnchor.constraint(equalToConstant: 2.5 * CGFloat.padding),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: padding),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: CGFloat.padding),
             passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 2.5 * padding),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 2.5 * CGFloat.padding),
             
-            checkBox.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: padding / 1.3),
+            checkBox.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: CGFloat.padding / 1.3),
             checkBox.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             
             rememberMeLabel.centerYAnchor.constraint(equalTo: checkBox.centerYAnchor),
-            rememberMeLabel.leadingAnchor.constraint(equalTo: checkBox.trailingAnchor, constant: padding / 2),
+            rememberMeLabel.leadingAnchor.constraint(equalTo: checkBox.trailingAnchor, constant: CGFloat.padding / 2),
             
             forgotPasswordButton.centerYAnchor.constraint(equalTo: checkBox.centerYAnchor),
-            forgotPasswordButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            forgotPasswordButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -CGFloat.padding),
             
-            loginButton.topAnchor.constraint(equalTo: rememberMeLabel.bottomAnchor, constant: padding),
+            loginButton.topAnchor.constraint(equalTo: rememberMeLabel.bottomAnchor, constant: CGFloat.padding),
             loginButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalToConstant: 2.5 * padding),
+            loginButton.heightAnchor.constraint(equalToConstant: 2.5 * CGFloat.padding),
             
-            createOneLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 2 * padding),
-            createOneLabel.leadingAnchor.constraint(equalTo: loginButton.leadingAnchor, constant: 2 * padding),
+            createOneLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 2 * CGFloat.padding),
+            createOneLabel.leadingAnchor.constraint(equalTo: loginButton.leadingAnchor, constant: 2 * CGFloat.padding),
             
             createOneButton.centerYAnchor.constraint(equalTo: createOneLabel.centerYAnchor),
-            createOneButton.leadingAnchor.constraint(equalTo: createOneLabel.trailingAnchor, constant: padding)
+            createOneButton.leadingAnchor.constraint(equalTo: createOneLabel.trailingAnchor, constant: CGFloat.padding)
         ])
     }
     

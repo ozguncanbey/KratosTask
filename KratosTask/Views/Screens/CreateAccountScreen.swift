@@ -81,39 +81,37 @@ extension CreateAccountScreen: CreateAccountScreenProtocol {
         view.addSubview(cancelButton)
     }
     
-    private func layoutUI() {
-        let padding: CGFloat = 20
-        
+    private func layoutUI() {        
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            nameTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
-            nameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            nameTextField.heightAnchor.constraint(equalToConstant: 2.5 * padding),
+            nameTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: CGFloat.padding),
+            nameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: CGFloat.padding),
+            nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -CGFloat.padding),
+            nameTextField.heightAnchor.constraint(equalToConstant: 2.5 * CGFloat.padding),
             
-            surnameTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: padding),
+            surnameTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: CGFloat.padding),
             surnameTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
             surnameTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
             surnameTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
             
-            emailTextField.topAnchor.constraint(equalTo: surnameTextField.bottomAnchor, constant: padding),
+            emailTextField.topAnchor.constraint(equalTo: surnameTextField.bottomAnchor, constant: CGFloat.padding),
             emailTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
             emailTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
             emailTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: padding),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: CGFloat.padding),
             passwordTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
             passwordTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
             passwordTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
             
-            cancelButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding),
-            cancelButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            cancelButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            cancelButton.heightAnchor.constraint(equalToConstant: 2.5 * padding),
+            cancelButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -CGFloat.padding),
+            cancelButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: CGFloat.padding),
+            cancelButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -CGFloat.padding),
+            cancelButton.heightAnchor.constraint(equalToConstant: 2.5 * CGFloat.padding),
             
-            createAccountButton.bottomAnchor.constraint(equalTo: cancelButton.topAnchor, constant: -padding),
+            createAccountButton.bottomAnchor.constraint(equalTo: cancelButton.topAnchor, constant: -CGFloat.padding),
             createAccountButton.leadingAnchor.constraint(equalTo: cancelButton.leadingAnchor),
             createAccountButton.trailingAnchor.constraint(equalTo: cancelButton.trailingAnchor),
             createAccountButton.heightAnchor.constraint(equalTo: cancelButton.heightAnchor),

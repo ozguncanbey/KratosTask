@@ -22,5 +22,6 @@ extension HomeViewModel: HomeViewModelProtocol {
     
     func viewDidLoad() {
         view?.configureVC()
+        view?.buttonsTapped()
     }
 }

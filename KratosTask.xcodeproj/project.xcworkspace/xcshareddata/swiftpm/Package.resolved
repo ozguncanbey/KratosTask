@@ -1,0 +1,15 @@
+{
+  "originHash" : "8ba317e92d428b43b1dc67125b0169f07e2ea9a139582d6048769f466196df50",
+  "pins" : [
+    {
+      "identity" : "swiftygif",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alexiscreuzot/SwiftyGif.git",
+      "state" : {
+        "revision" : "4430cbc148baa3907651d40562d96325426f409a",
+        "version" : "5.4.5"
+      }
+    }
+  ],
+  "version" : 3
+}

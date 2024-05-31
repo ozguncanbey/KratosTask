@@ -6,12 +6,60 @@
 //
 
 import UIKit
+import SwiftyGif
+
+// MARK: - Protocol
+protocol LaunchScreenProtocol: AnyObject {
+    func configureVC()
+    func playGif()
+}
 
 final class LaunchScreen: UIViewController {
-
+    
+    // MARK: - Variables
+    private let viewModel = LaunchViewModel()
+    
+    private var gifImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.view = self
+        viewModel.viewDidLoad()
+    }
+}
 
-        view.backgroundColor = .red
+// MARK: - Extensions
+extension LaunchScreen: LaunchScreenProtocol {
+    
+    func configureVC() {
+        view.backgroundColor = .systemBackground
+    }
+    
+    func playGif() {
+        gifImageView = UIImageView()
+        
+        do {
+            let gif = try UIImage(gifName: "launch_gif")
+            gifImageView = UIImageView(gifImage: gif, loopCount: 3)
+        } catch {
+            print(error)
+        }
+        
+        gifImageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(gifImageView)
+        
+        NSLayoutConstraint.activate([
+            gifImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            gifImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        ])
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.navigateToNextScreen()
+        }
+    }
+    
+    private func navigateToNextScreen() {
+        navigationController?.pushViewController(LoginScreen(), animated: true)
     }
 }
