@@ -60,6 +60,9 @@ extension LaunchScreen: LaunchScreenProtocol {
     }
     
     private func navigateToNextScreen() {
-        navigationController?.pushViewController(LoginScreen(), animated: true)
+        let loginScreen = LoginScreen()
+        let navigationController = UINavigationController(rootViewController: loginScreen)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
     }
 }

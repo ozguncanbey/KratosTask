@@ -11,6 +11,8 @@
 		77BD6DBF2C09FD4200414E04 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD6DBE2C09FD4200414E04 /* LaunchViewModel.swift */; };
 		77BD6DC92C0A026400414E04 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 77BD6DC82C0A026400414E04 /* SwiftyGif */; };
 		77BD6DCB2C0A028200414E04 /* launch_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77BD6DCA2C0A028200414E04 /* launch_gif.gif */; };
+		77BD6DCE2C0A042500414E04 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 77BD6DCD2C0A042500414E04 /* FirebaseAuth */; };
+		77BD6DD02C0A047F00414E04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77BD6DCF2C0A047F00414E04 /* GoogleService-Info.plist */; };
 		77D338682C09A014005C4B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338672C09A014005C4B82 /* AppDelegate.swift */; };
 		77D3386A2C09A014005C4B82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338692C09A014005C4B82 /* SceneDelegate.swift */; };
 		77D338712C09A015005C4B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D338702C09A015005C4B82 /* Assets.xcassets */; };
@@ -33,6 +35,7 @@
 		77BD6DBC2C09FB0900414E04 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		77BD6DBE2C09FD4200414E04 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		77BD6DCA2C0A028200414E04 /* launch_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = launch_gif.gif; sourceTree = "<group>"; };
+		77BD6DCF2C0A047F00414E04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77D338642C09A014005C4B82 /* KratosTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KratosTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D338672C09A014005C4B82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77D338692C09A014005C4B82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77BD6DC92C0A026400414E04 /* SwiftyGif in Frameworks */,
+				77BD6DCE2C0A042500414E04 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 				77D338702C09A015005C4B82 /* Assets.xcassets */,
 				77D338722C09A015005C4B82 /* LaunchScreen.storyboard */,
 				77D338752C09A015005C4B82 /* Info.plist */,
+				77BD6DCF2C0A047F00414E04 /* GoogleService-Info.plist */,
 			);
 			path = KratosTask;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			name = KratosTask;
 			packageProductDependencies = (
 				77BD6DC82C0A026400414E04 /* SwiftyGif */,
+				77BD6DCD2C0A042500414E04 /* FirebaseAuth */,
 			);
 			productName = KratosTask;
 			productReference = 77D338642C09A014005C4B82 /* KratosTask.app */;
@@ -205,6 +211,7 @@
 			mainGroup = 77D3385B2C09A014005C4B82;
 			packageReferences = (
 				77BD6DC72C0A026400414E04 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+				77BD6DCC2C0A042500414E04 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 77D338652C09A014005C4B82 /* Products */;
 			projectDirPath = "";
@@ -221,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77BD6DCB2C0A028200414E04 /* launch_gif.gif in Resources */,
+				77BD6DD02C0A047F00414E04 /* GoogleService-Info.plist in Resources */,
 				77D338712C09A015005C4B82 /* Assets.xcassets in Resources */,
 				77D338742C09A015005C4B82 /* Base in Resources */,
 			);
@@ -473,6 +481,14 @@
 				minimumVersion = 5.4.5;
 			};
 		};
+		77BD6DCC2C0A042500414E04 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -480,6 +496,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77BD6DC72C0A026400414E04 /* XCRemoteSwiftPackageReference "SwiftyGif" */;
 			productName = SwiftyGif;
+		};
+		77BD6DCD2C0A042500414E04 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77BD6DCC2C0A042500414E04 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

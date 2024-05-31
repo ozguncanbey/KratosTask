@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 // MARK: - Protocol
 protocol LoginScreenProtocol: AnyObject {
@@ -186,11 +187,31 @@ extension LoginScreen: LoginScreenProtocol {
     }
     
     @objc private func loginButtonTapped() {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         
+        if !emailTextField.hasText, !passwordTextField.hasText {
+            presentAlertOnMainThread(title: "Fill the Blanks!", message: "Please make sure that all the blanks are filled.", buttonTitle: "Ok")
+        } else {
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] _, error in
+                guard let self = self else { return }
+                
+                guard error == nil else {
+                    self.presentAlertOnMainThread(title: "Error!", message: error?.localizedDescription ?? "Unexpected error! Make sure everything is correct.", buttonTitle: "Ok")
+                    return
+                }
+                
+                self.navigateToNextScreen()
+            }
+        }
     }
     
     @objc private func createAccountButtonTapped() {
         navigationController?.pushViewController(CreateAccountScreen(), animated: true)
+    }
+    
+    private func navigateToNextScreen() {
+        navigationController?.pushViewController(HomeScreen(), animated: true)
     }
     
     private func clearAll() {

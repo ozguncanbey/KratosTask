@@ -75,6 +75,6 @@ extension HomeScreen: HomeScreenProtocol {
     }
     
     @objc private func logoutButtonTapped() {
-        
+        navigationController?.popViewController(animated: true)
     }
 }

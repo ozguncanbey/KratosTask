@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 // MARK: - Protocol
 protocol CreateAccountScreenProtocol: AnyObject {
@@ -14,7 +15,7 @@ protocol CreateAccountScreenProtocol: AnyObject {
 }
 
 final class CreateAccountScreen: UIViewController {
-
+    
     // MARK: - Variables
     private let viewModel = CreateAccountViewModel()
     
@@ -81,7 +82,7 @@ extension CreateAccountScreen: CreateAccountScreenProtocol {
         view.addSubview(cancelButton)
     }
     
-    private func layoutUI() {        
+    private func layoutUI() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -124,7 +125,24 @@ extension CreateAccountScreen: CreateAccountScreenProtocol {
     }
     
     @objc private func createAccountButtonTapped() {
+        nameTextField.resignFirstResponder()
+        surnameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         
+        if !nameTextField.hasText, !surnameTextField.hasText, !emailTextField.hasText, !passwordTextField.hasText {
+            presentAlertOnMainThread(title: "Fill the Blanks!", message: "Please make sure that all the blanks are filled.", buttonTitle: "Ok")
+        } else {
+            Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { result, error in
+                guard error == nil else {
+                    self.presentAlertOnMainThread(title: "Error!", message: error?.localizedDescription ?? "Unexpected error! Make sure everything is correct.", buttonTitle: "Ok")
+                    return
+                }
+                
+                self.presentAlertOnMainThread(title: "Done!", message: "Your account was created successfully.", buttonTitle: "Ok")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @objc private func cancelButtonTapped() {
