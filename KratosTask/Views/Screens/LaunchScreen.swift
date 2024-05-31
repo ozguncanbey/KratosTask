@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LaunchScreen.swift
 //  KratosTask
 //
 //  Created by Özgün Can Beydili on 31.05.2024.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class LaunchScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .red
     }
-
-
 }
-
