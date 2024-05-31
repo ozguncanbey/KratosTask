@@ -159,7 +159,7 @@ extension LoginScreen: LoginScreenProtocol {
             checkBox.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             
             rememberMeLabel.centerYAnchor.constraint(equalTo: checkBox.centerYAnchor),
-            rememberMeLabel.leadingAnchor.constraint(equalTo: checkBox.trailingAnchor, constant: padding),
+            rememberMeLabel.leadingAnchor.constraint(equalTo: checkBox.trailingAnchor, constant: padding / 2),
             
             forgotPasswordButton.centerYAnchor.constraint(equalTo: checkBox.centerYAnchor),
             forgotPasswordButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
@@ -196,7 +196,8 @@ extension LoginScreen: LoginScreenProtocol {
     }
     
     private func clearAll() {
-        
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
 }
 
@@ -206,8 +207,7 @@ extension LoginScreen: UITextFieldDelegate {
         
         if textField == emailTextField {
             passwordTextField.becomeFirstResponder()
-        }
-        else if textField == passwordTextField {
+        } else if textField == passwordTextField {
             loginButtonTapped()
         }
         

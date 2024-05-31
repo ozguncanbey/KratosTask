@@ -22,5 +22,6 @@ extension CreateAccountViewModel: CreateAccountViewModelProtocol {
     
     func viewDidLoad() {
         view?.configureVC()
+        view?.buttonsTapped()
     }
 }
