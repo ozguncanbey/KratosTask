@@ -13,6 +13,7 @@
 		77BD6DCB2C0A028200414E04 /* launch_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77BD6DCA2C0A028200414E04 /* launch_gif.gif */; };
 		77BD6DCE2C0A042500414E04 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 77BD6DCD2C0A042500414E04 /* FirebaseAuth */; };
 		77BD6DD02C0A047F00414E04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77BD6DCF2C0A047F00414E04 /* GoogleService-Info.plist */; };
+		77BD6DD22C0A1F5000414E04 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 77BD6DD12C0A1F5000414E04 /* FirebaseFirestore */; };
 		77D338682C09A014005C4B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338672C09A014005C4B82 /* AppDelegate.swift */; };
 		77D3386A2C09A014005C4B82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338692C09A014005C4B82 /* SceneDelegate.swift */; };
 		77D338712C09A015005C4B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D338702C09A015005C4B82 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 			files = (
 				77BD6DC92C0A026400414E04 /* SwiftyGif in Frameworks */,
 				77BD6DCE2C0A042500414E04 /* FirebaseAuth in Frameworks */,
+				77BD6DD22C0A1F5000414E04 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +182,7 @@
 			packageProductDependencies = (
 				77BD6DC82C0A026400414E04 /* SwiftyGif */,
 				77BD6DCD2C0A042500414E04 /* FirebaseAuth */,
+				77BD6DD12C0A1F5000414E04 /* FirebaseFirestore */,
 			);
 			productName = KratosTask;
 			productReference = 77D338642C09A014005C4B82 /* KratosTask.app */;
@@ -501,6 +504,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77BD6DCC2C0A042500414E04 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		77BD6DD12C0A1F5000414E04 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77BD6DCC2C0A042500414E04 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

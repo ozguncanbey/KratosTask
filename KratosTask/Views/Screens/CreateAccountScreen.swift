@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 // MARK: - Protocol
 protocol CreateAccountScreenProtocol: AnyObject {
@@ -133,14 +134,27 @@ extension CreateAccountScreen: CreateAccountScreenProtocol {
         if !nameTextField.hasText, !surnameTextField.hasText, !emailTextField.hasText, !passwordTextField.hasText {
             presentAlertOnMainThread(title: "Fill the Blanks!", message: "Please make sure that all the blanks are filled.", buttonTitle: "Ok")
         } else {
+            // authentication part
             Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { result, error in
-                guard error == nil else {
+                guard let result = result, error == nil else {
                     self.presentAlertOnMainThread(title: "Error!", message: error?.localizedDescription ?? "Unexpected error! Make sure everything is correct.", buttonTitle: "Ok")
                     return
                 }
                 
-                self.presentAlertOnMainThread(title: "Done!", message: "Your account was created successfully.", buttonTitle: "Ok")
-                self.navigationController?.popViewController(animated: true)
+                // store the users info
+                let db = Firestore.firestore()
+                db.collection("users").document(result.user.uid).setData([
+                    "name": self.nameTextField.text!,
+                    "surname": self.surnameTextField.text!,
+                    "email": self.emailTextField.text!
+                ]) { error in
+                    if let error = error {
+                        self.presentAlertOnMainThread(title: "Error!", message: error.localizedDescription, buttonTitle: "Ok")
+                    } else {
+                        self.presentAlertOnMainThread(title: "Done!", message: "Your account was created successfully.", buttonTitle: "Ok")
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
             }
         }
     }
