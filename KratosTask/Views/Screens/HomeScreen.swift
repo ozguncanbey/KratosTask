@@ -25,7 +25,7 @@ final class HomeScreen: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extensions
 extension HomeScreen: HomeScreenProtocol {
     
     func configureVC() {

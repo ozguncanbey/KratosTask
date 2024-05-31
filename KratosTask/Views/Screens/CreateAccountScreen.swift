@@ -25,7 +25,7 @@ final class CreateAccountScreen: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extensions
 extension CreateAccountScreen: CreateAccountScreenProtocol {
     
     func configureVC() {

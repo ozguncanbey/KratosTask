@@ -18,6 +18,11 @@
 		77D338912C09A392005C4B82 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338902C09A392005C4B82 /* LoginViewModel.swift */; };
 		77D338932C09A495005C4B82 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338922C09A495005C4B82 /* CreateAccountViewModel.swift */; };
 		77D338952C09A659005C4B82 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338942C09A659005C4B82 /* HomeViewModel.swift */; };
+		77D338972C09A7FD005C4B82 /* KTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338962C09A7FD005C4B82 /* KTButton.swift */; };
+		77D338992C09A832005C4B82 /* KTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D338982C09A832005C4B82 /* KTTextField.swift */; };
+		77D3389B2C09AC13005C4B82 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3389A2C09AC13005C4B82 /* UIView+Ext.swift */; };
+		77D3389D2C09B6B3005C4B82 /* KTCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3389C2C09B6B3005C4B82 /* KTCheckBox.swift */; };
+		77D3389F2C09BE0C005C4B82 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3389E2C09BE0C005C4B82 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		77D338902C09A392005C4B82 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		77D338922C09A495005C4B82 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		77D338942C09A659005C4B82 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		77D338962C09A7FD005C4B82 /* KTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTButton.swift; sourceTree = "<group>"; };
+		77D338982C09A832005C4B82 /* KTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTTextField.swift; sourceTree = "<group>"; };
+		77D3389A2C09AC13005C4B82 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		77D3389C2C09B6B3005C4B82 /* KTCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTCheckBox.swift; sourceTree = "<group>"; };
+		77D3389E2C09BE0C005C4B82 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,9 @@
 		77D3387F2C09A223005C4B82 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				77D338962C09A7FD005C4B82 /* KTButton.swift */,
+				77D338982C09A832005C4B82 /* KTTextField.swift */,
+				77D3389C2C09B6B3005C4B82 /* KTCheckBox.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -126,6 +139,8 @@
 		77D338812C09A259005C4B82 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				77D3389A2C09AC13005C4B82 /* UIView+Ext.swift */,
+				77D3389E2C09BE0C005C4B82 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,11 +217,16 @@
 			files = (
 				77D338682C09A014005C4B82 /* AppDelegate.swift in Sources */,
 				77D338952C09A659005C4B82 /* HomeViewModel.swift in Sources */,
+				77D3389F2C09BE0C005C4B82 /* UIViewController+Ext.swift in Sources */,
+				77D3389D2C09B6B3005C4B82 /* KTCheckBox.swift in Sources */,
 				77D3388B2C09A2E6005C4B82 /* LoginScreen.swift in Sources */,
 				77D3388F2C09A305005C4B82 /* HomeScreen.swift in Sources */,
+				77D338972C09A7FD005C4B82 /* KTButton.swift in Sources */,
 				77D3386A2C09A014005C4B82 /* SceneDelegate.swift in Sources */,
 				77D338932C09A495005C4B82 /* CreateAccountViewModel.swift in Sources */,
 				77D338892C09A2D7005C4B82 /* LaunchScreen.swift in Sources */,
+				77D3389B2C09AC13005C4B82 /* UIView+Ext.swift in Sources */,
+				77D338992C09A832005C4B82 /* KTTextField.swift in Sources */,
 				77D3388D2C09A2F7005C4B82 /* CreateAccountScreen.swift in Sources */,
 				77D338912C09A392005C4B82 /* LoginViewModel.swift in Sources */,
 			);
