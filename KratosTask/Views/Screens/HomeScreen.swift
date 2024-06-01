@@ -96,6 +96,23 @@ extension HomeScreen: HomeScreenProtocol {
     }
     
     @objc private func logoutButtonTapped() {
-        navigationController?.popViewController(animated: true)
+        
+        let alert = UIAlertController(title: "Log Out!", message: "Are you sure you want to log out?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
+            guard let self = self else { return }
+            
+            do {
+                try FirebaseAuth.Auth.auth().signOut()
+                
+                navigationController?.popViewController(animated: true)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }))
+    
+        present(alert, animated: true)
     }
 }
