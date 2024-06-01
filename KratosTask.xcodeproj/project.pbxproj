@@ -406,6 +406,7 @@
 				DEVELOPMENT_TEAM = 76ZJ9H6F4F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KratosTask/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Kratos 3D";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -434,6 +435,7 @@
 				DEVELOPMENT_TEAM = 76ZJ9H6F4F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KratosTask/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Kratos 3D";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
