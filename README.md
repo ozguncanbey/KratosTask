@@ -48,7 +48,7 @@ Kratos 3D Task is a mobile application created with Swift UIkit using Firebase A
    ```
 4. Navigate to the project directory and install the required pods:
    ```sh
-   cd Kratos3DTask
+   cd KratosTask
    pod install
    ```
 5. Open the `.xcworkspace` file in Xcode.
