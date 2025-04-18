@@ -13,23 +13,23 @@ Kratos 3D Task is a mobile application created with Swift UIkit using Firebase A
 ## Screens
 
 1. **Launch Screen**:
-    - A splash screen with a GIF that displays for 5 seconds before transitioning to the login screen.
-    - ![launch](https://github.com/ozguncanbey/KratosTask/assets/138692325/ac4778b6-da87-4fd1-a99e-24e6e61011c0)
+    - A splash screen with a GIF that displays for 5 seconds before transitioning to the login screen.  
+    <img src="https://github.com/ozguncanbey/KratosTask/assets/138692325/ac4778b6-da87-4fd1-a99e-24e6e61011c0" width="300"/>
 
 2. **Login Screen**:
-    - Allows users to log in using their email and password.
-    - Option to navigate to the Create User screen if the user doesn't have an account.
-    - ![login](https://github.com/ozguncanbey/KratosTask/assets/138692325/7de9f6d3-f2ef-47e8-935d-e9b8b4f322f3)
+    - Allows users to log in using their email and password.  
+    - Option to navigate to the Create User screen if the user doesn't have an account.  
+    <img src="https://github.com/ozguncanbey/KratosTask/assets/138692325/7de9f6d3-f2ef-47e8-935d-e9b8b4f322f3" width="300"/>
 
 3. **Create User Screen**:
-    - Allows users to create a new account by providing their email, password, first name, and last name.
-    - User data is stored in Firestore upon successful account creation.
-    - ![register](https://github.com/ozguncanbey/KratosTask/assets/138692325/a4e695ea-3e61-4a30-b27b-f8c2d73cd8b6)
+    - Allows users to create a new account by providing their email, password, first name, and last name.  
+    - User data is stored in Firestore upon successful account creation.  
+    <img src="https://github.com/ozguncanbey/KratosTask/assets/138692325/a4e695ea-3e61-4a30-b27b-f8c2d73cd8b6" width="300"/>
 
 4. **Home Screen**:
-    - Displays the first name and last name of the logged-in user at the center of the screen.
-    - Includes a logout button to sign out the user and return to the login screen.
-    - ![home](https://github.com/ozguncanbey/KratosTask/assets/138692325/e727dd32-a0f4-4160-9d0a-dc7f77c16d56)
+    - Displays the first name and last name of the logged-in user at the center of the screen.  
+    - Includes a logout button to sign out the user and return to the login screen.  
+    <img src="https://github.com/ozguncanbey/KratosTask/assets/138692325/e727dd32-a0f4-4160-9d0a-dc7f77c16d56" width="300"/>
 
 ## Technologies Used
 
